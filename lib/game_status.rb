@@ -27,4 +27,4 @@ end
 
 def full?()
   board.any? {|ele| ele == " "}
-end 
+end
