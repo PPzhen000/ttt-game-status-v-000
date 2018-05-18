@@ -40,8 +40,10 @@ end
 
 def winner(board)
   if won?(board) != nil
-    return board[won?(board)][0]
+    index = won?(board)
+    index = index[0]
+    return board[index]
   else
     return nil
-  end 
+  end
 end
