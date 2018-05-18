@@ -15,17 +15,12 @@ WIN_COMBINATIONS = [
   [2,4,6]  #Right start diagonal
 ]
 
-def won(board)
+def won?(board)
+  winner =nil ;
   WIN_COMBINATIONS.each do |wincomb|
-    wincomb.each do|index|
-      if !position_taken?(board, index)
-        return false
-      else 
-        wincomb.all? do |ele| 
-         board[ele] == "X" || board[ele] == "O"
-         return wincomb 
-        end  
-      end 
-    end
+      wincomb.all? {|index| board[index] == "X"} ||
+      wincomb.all? {|index| board[index] == "O"}
+        winner = wincomb      
   end 
+  return winner  
 end 
