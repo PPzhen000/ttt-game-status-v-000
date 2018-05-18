@@ -27,6 +27,5 @@ def won?(board)
 end
 
 def full?(board)
-  #!board.any? {|ele| ele == " "}
   board.any? { |x| x == " " }
 end
