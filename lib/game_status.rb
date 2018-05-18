@@ -28,9 +28,5 @@ end
 
 def full?(board)
   #!board.any? {|ele| ele == " "}
-  if board.any? { |x| x == " " }
-    return false
-  else
-    return true
-  end
+  board.any? { |x| x == " " }
 end
