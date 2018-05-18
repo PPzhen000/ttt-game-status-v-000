@@ -16,7 +16,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  winner = nil ;
+  winner = nil
   WIN_COMBINATIONS.each do |wincomb|
      if  wincomb.all? {|index| board[index] == "X"} ||
          wincomb.all? {|index| board[index] == "O"}
@@ -30,10 +30,10 @@ def full?(board)
   !board.any? { |x| x == " " }
 end
 
-def draw(board)
-  if full?(board) && won?(board) == nil 
+def draw?(board)
+  if !won?(board) && full?(board)
     return true
-  else
+  elsif !won?(board) && !full?(board) || !won?(board)
     return false
   end
 end
