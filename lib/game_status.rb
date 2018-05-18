@@ -24,3 +24,7 @@ def won?(board)
   end
   return winner
 end
+
+def full?()
+  board.any? {|ele| ele == " "}
+end 
