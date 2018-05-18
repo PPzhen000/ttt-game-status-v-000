@@ -26,11 +26,11 @@ def won?(board)
   return winner
 end
 
-def full?()
+def full?(board)
   #!board.any? {|ele| ele == " "}
   if board.any? { |x| x == " " }
     return false
   else
     return true
-  end 
+  end
 end
