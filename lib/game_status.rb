@@ -20,7 +20,7 @@ def won?(board)
   WIN_COMBINATIONS.each do |wincomb|
       wincomb.all? {|index| board[index] == "X"} ||
       wincomb.all? {|index| board[index] == "O"}
-        winner = wincomb      
-  end 
-  return winner  
-end 
+        winner = wincomb
+  end
+  return winner
+end
