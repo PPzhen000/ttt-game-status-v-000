@@ -16,11 +16,12 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  winner =nil ;
+  winner = nil ;
   WIN_COMBINATIONS.each do |wincomb|
-      wincomb.all? {|index| board[index] == "X"} ||
-      wincomb.all? {|index| board[index] == "O"}
-      winner = wincomb
+     if  wincomb.all? {|index| board[index] == "X"} ||
+         wincomb.all? {|index| board[index] == "O"}
+           winner = wincomb
+     end
   end
   return winner
 end
